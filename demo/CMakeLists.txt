@@ -15,4 +15,6 @@ link_directories(${basiccmake_BINARY_DIR}/hello)
 add_executable(helloDemo WIN32 ${SRCS} ${INCS})
 
 # Link the executable to the Hello library.
+# Boost_LIBRARIES was setup up in the root cmake file and includes the
+# filesystem and system libraries.
 target_link_libraries(helloDemo libHello ${Boost_LIBRARIES})
